@@ -99,13 +99,13 @@ print('Loading data')
 train_A = pd.read_csv('data/start-kit/training-v1/offenseval-training-v1.tsv', sep='\t')
 test_A = pd.read_csv('data/start-kit/trial-data/offenseval-trial.txt', header=None, sep='\t')
 
-# train_and_eval(train_A, test_A, "a", 1, 'data/A/testset-taska.tsv')
+train_and_eval(train_A, test_A, "a", 1, 'data/A/testset-taska.tsv')
 
 # Task B
 train_B = train_A.dropna(subset=['subtask_b'])
 test_B = test_A.dropna(subset=[2])
 
-# train_and_eval(train_B, test_B, "b", 2, 'data/B/testset-taskb.tsv')
+train_and_eval(train_B, test_B, "b", 2, 'data/B/testset-taskb.tsv')
 
 train_C = train_B.dropna(subset=['subtask_c'])
 test_C = test_B.dropna(subset=[3])
